@@ -1,8 +1,11 @@
 const express = require('express');
-const app = express();
+const account = require('./account');
 
-app.get('/', (req, res) => {
+const router = express.Router();
+
+router.use('/account', account);
+router.get('/', (req, res) => {
     res.end();
 });
 
-module.exports = app;
+module.exports = router;
