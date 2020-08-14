@@ -9,7 +9,7 @@ const app = express();
 const db = mongoose.connection;
 db.on('error', console.error);
 db.once('open', () => { console.log('[+] Connected to mongo server'); });
-mongoose.connect('mongodb://localhost/todo');
+mongoose.connect('mongodb://localhost/myapp');
 
 app.use(session({
     secret: "myapp1!2@3#",
